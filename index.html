@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="estilo.css">
+        <title>Lista de tarefas</title>
+    </head>
+    <body class="p-3">
+        <div class="container col-12 h-100 p-3 text-white text-center d-flex flex-column align-items-center">
+            <h1>Lista de tarefas</h1>
+            <div id="entrada" class="w-100 flex-row">
+                <input type="text" id="inputTarefa" placeholder="Descrição da tarefa..." class="border-0 rounded-pill p-2 w-100 shadow"></input>
+            </div>
+            <div id="controles" class="w-100 pt-3 d-flex flex-column flex-lg-row-reverse justify-content-around align-items-center">
+                <button type="button" id="enviar" class="btn btn-secondary m-2 shadow">Enviar</button>
+                <div id="campoPesquisar" class="w-100 bg-white p-2 m-2 rounded-pill d-flex flex-nowrap align-items-center justify-content-around shadow">
+                    <input type="text" name="inputPesquisar" id="inputPesquisar" class="w-100 border-0" placeholder="Pesquisar item...">
+                    <i class="bi bi-search text-center text-black rounded-pill" id="btnPesquisar"></i>
+                </div>
+                <div id="campoFiltros" class="bg-white text-black h-100 p-2 m-2 rounded-2 rounded-sm-5 shadow d-flex flex-column flex-sm-row align-items-center justify-content-around">
+                    <div>
+                        <input type="radio" name="filtro" id="filtroTodas" class="form-check-input pe-1" checked>
+                        <label for="filtroTodas" class="pe-1">Todas</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="filtro" id="filtroPendentes" class="form-check-input pe-1">
+                        <label for="filtroPendentes" class="pe-1">Pendentes</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="filtro" id="filtroConcluidas" class="form-check-input pe-1">
+                        <label for="filtroConcluidas" class="pe-1">Concluidas</label>
+                    </div>
+                </div>
+            </div>
+            <ul id="listaTarefas" class="bg-white text-black rounded-3 m-3 px-3 py-1 h-100 w-100 shadow overflow-auto" type="none">
+                <!-- <li class="tarefa w-100 rounded-2 my-3 p-2 shadow d-flex flex-column">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum alias harum suscipit nisi officiis nam?</p>
+                    <div class="tarefaControles">
+                        <button type="button" class="concluirTarefa botaoTarefa">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </button>
+                        <button type="button" class="editarTarefa botaoTarefa">
+                            <i class="bi bi-pencil-square"></i>
+                        </button>
+                        <button type="button" class="excluirTarefa botaoTarefa">
+                            <i class="bi bi-trash-fill"></i>
+                        </button>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
